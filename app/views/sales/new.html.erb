@@ -1,4 +1,50 @@
 <%= form_with model: @sale, local: true do |f| %>
+<div class="row">
+  <div class="col-lg-2">
+    <p><%= f.label :cod, "Código de la venta" %></p>
+    <p><%= f.label :detail, "Detalle de la venta" %></p>
+    <br>
+    <p><%= f.label :category, "Categoría de la venta" %></p>
+    <p><%= f.label :value, "Valor de la venta" %></p>
+    <p><%= f.label :discount, "Porcentaje de descuento" %></p>
+    <p><%= f.label :tax, "Exento de IVA" %></p>
+
+  </div>
+  <div class="col-lg-3">
+    <p><%= f.number_field :cod %></p>
+    <p><%= f.text_area :detail %></p>
+    <p><%= f.text_field :category %></p>
+    <p><%= f.number_field :value %></p>
+    <p><%= f.number_field :discount %></p>
+    <p><%= f.check_box :tax %></p>
+
+  </div>
+
+</div>
+
+
+
+<p>
+  <%= f.submit "Enviar" %>
+</p>
+
+
+<% end %>
+
+
+
+
+
+<!-- <%= form_with model: @sale, local: true do |f| %>
+<div class="row">
+  <div class="col-lg-3">
+
+  </div>
+  <div class="col-lg-3">
+
+  </div>
+
+</div>
 
 <p>
   <%= f.label :cod, "Código de la venta" %>
@@ -35,4 +81,4 @@
 </p>
 
 
-<% end %>
+<% end %> -->
