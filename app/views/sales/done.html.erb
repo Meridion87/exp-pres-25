@@ -3,7 +3,8 @@
 <%= link_to "Volver", sales_new_path%>
 
 <% @sale.each do |s| %>
-  <div class="">
+  <div style="border-style: dotted;">
+
     <p>Código de la venta: <%= s.cod %></p>
     <p>Detalle de la venta: <%= s.detail %></p>
     <p>Categoría de la venta: <%= s.category %></p>
@@ -11,6 +12,7 @@
     <p>Porcentaje de descuento aplicado: <%= s.discount %></p>
     <p>Porcentaje correspondiente al IVA: <%= s.tax %></p>
     <p>Total de la venta: <%= s.total %></p>
-    <br>
+
+
   </div>
 <% end %>

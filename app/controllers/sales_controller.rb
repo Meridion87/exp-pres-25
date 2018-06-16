@@ -5,7 +5,7 @@ class SalesController < ApplicationController
 
   def create
     @sale = Sale.new(sale_params)
-    @sale.total = @sale.value * (1 - @sale.discount/100.0)
+    @sale.total = @sale.value * (1.0 - @sale.discount/100.0)
 
     if @sale.tax == 1
       @sale.tax = 0
